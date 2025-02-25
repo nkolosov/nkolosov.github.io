@@ -1,103 +1,32 @@
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-}
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-    overflow: hidden;
-}
-
+/* Затемнение фона шапки */
 header {
-    background: #333;
-    color: #fff;
-    padding-top: 30px;
-    min-height: 70px;
-    border-bottom: #77aaff 3px solid;
+    position: relative;
 }
 
-.header-content {
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Затемнение */
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.profile {
-    text-align: center;
-}
-
-.profile-photo {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 3px solid #77aaff;
-}
-
-.social-links {
-    display: flex;
-    gap: 15px;
-}
-
+/* Социальные ссылки */
 .social-links a {
-    color: #fff;
     text-decoration: none;
     font-weight: bold;
 }
 
 .social-links a:hover {
-    color: #77aaff;
+    color: #77aaff !important;
 }
 
-section {
-    padding: 20px 0;
-}
-
-h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.columns {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.column {
-    flex: 1;
-    min-width: 250px;
-}
-
-.tag-cloud {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-}
-
-.tag {
-    background: #77aaff;
-    color: #fff;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 14px;
-}
-
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    margin-top: 20px;
-}
-
-footer p {
-    margin: 0;
+/* Облако тегов */
+.tag-cloud .badge {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
 }
