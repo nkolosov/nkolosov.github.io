@@ -8,7 +8,8 @@ body {
 }
 
 .container {
-    width: 80%;
+    width: 90%;
+    max-width: 1200px;
     margin: auto;
     overflow: hidden;
 }
@@ -21,44 +22,72 @@ header {
     border-bottom: #77aaff 3px solid;
 }
 
-header h1 {
-    text-align: center;
-    margin: 0;
-    font-size: 36px;
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-header p {
+.profile {
     text-align: center;
-    font-size: 18px;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #77aaff;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.social-links a:hover {
+    color: #77aaff;
 }
 
 section {
     padding: 20px 0;
 }
 
-section h2 {
+h2 {
     text-align: center;
     margin-bottom: 20px;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
+.columns {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
-ul li {
+.column {
+    flex: 1;
+    min-width: 250px;
+}
+
+.tag-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.tag {
     background: #77aaff;
-    margin: 5px 0;
-    padding: 10px;
+    color: #fff;
+    padding: 5px 10px;
     border-radius: 5px;
-}
-
-.project {
-    background: #fff;
-    padding: 15px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
 }
 
 footer {

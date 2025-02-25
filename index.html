@@ -9,55 +9,80 @@
 <body>
 <header>
     <div class="container">
-        <h1>Привет, я Golang Разработчик</h1>
-        <p>Создаю высоконагруженные и масштабируемые приложения на Go.</p>
+        <div class="header-content">
+            <div class="profile">
+                <img src="assets/profile.jpg" alt="Моя фотография" class="profile-photo">
+                <h1>Golang Разработчик</h1>
+                <p>Создаю высоконагруженные и масштабируемые приложения на Go.</p>
+            </div>
+            <div class="social-links">
+                <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
+                <a href="https://twitter.com/yourusername" target="_blank">Twitter</a>
+                <a href="https://medium.com/@yourusername" target="_blank">Medium</a>
+            </div>
+        </div>
     </div>
 </header>
 
 <section id="about">
     <div class="container">
         <h2>О себе</h2>
-        <p>Я профессиональный разработчик с опытом работы в создании backend-систем, микросервисов и API. Мои проекты включают в себя высоконагруженные системы, которые обрабатывают миллионы запросов в день.</p>
+        <div class="columns">
+            <div class="column">
+                <p>Я профессиональный разработчик с опытом работы в создании backend-систем, микросервисов и API. Мои проекты включают в себя высоконагруженные системы, которые обрабатывают миллионы запросов в день.</p>
+            </div>
+            <div class="column">
+                <h3>Контактные данные</h3>
+                <ul>
+                    <li>Email: <a href="mailto:developer@example.com">developer@example.com</a></li>
+                    <li>Телефон: +7 (123) 456-78-90</li>
+                </ul>
+            </div>
+        </div>
     </div>
 </section>
 
 <section id="skills">
     <div class="container">
         <h2>Навыки</h2>
-        <ul>
-            <li>Golang (Go)</li>
-            <li>Микросервисная архитектура</li>
-            <li>REST/gRPC API</li>
-            <li>Базы данных: PostgreSQL, MySQL, Redis</li>
-            <li>Docker, Kubernetes</li>
-            <li>CI/CD (GitLab CI, GitHub Actions)</li>
-        </ul>
-    </div>
-</section>
-
-<section id="projects">
-    <div class="container">
-        <h2>Проекты</h2>
-        <div class="project">
-            <h3>Проект 1: Высоконагруженный API</h3>
-            <p>Разработка и оптимизация API для обработки более 1 миллиона запросов в день.</p>
-        </div>
-        <div class="project">
-            <h3>Проект 2: Микросервисная архитектура</h3>
-            <p>Создание системы микросервисов для управления пользовательскими данными.</p>
+        <div class="tag-cloud">
+            <span class="tag">Golang</span>
+            <span class="tag">Микросервисы</span>
+            <span class="tag">REST API</span>
+            <span class="tag">gRPC</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">Redis</span>
+            <span class="tag">Docker</span>
+            <span class="tag">Kubernetes</span>
+            <span class="tag">CI/CD</span>
+            <span class="tag">Git</span>
+            <span class="tag">Linux</span>
+            <span class="tag">AWS</span>
+            <span class="tag">TDD</span>
         </div>
     </div>
 </section>
 
-<section id="contact">
+<section id="publications">
     <div class="container">
-        <h2>Контакты</h2>
-        <p>Свяжитесь со мной для обсуждения вашего проекта:</p>
-        <ul>
-            <li>Email: <a href="mailto:developer@example.com">developer@example.com</a></li>
-            <li>GitHub: <a href="https://github.com/yourusername">github.com/yourusername</a></li>
-            <li>LinkedIn: <a href="https://www.linkedin.com/in/yourusername">linkedin.com/in/yourusername</a></li>
-        </ul>
+        <h2>Публикации</h2>
+        <div class="columns">
+            <div class="column">
+                <h3>Статьи на Medium</h3>
+                <ul>
+                    <li><a href="https://medium.com/@yourusername/article1" target="_blank">Оптимизация производительности в Go</a></li>
+                    <li><a href="https://medium.com/@yourusername/article2" target="_blank">Микросервисы: лучшие практики</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <h3>Доклады и презентации</h3>
+                <ul>
+                    <li><a href="https://youtube.com/yourvideo" target="_blank">Доклад на конференции GoConf 2023</a></li>
+                    <li><a href="https://slideshare.com/yourslides" target="_blank">Презентация по Kubernetes</a></li>
+                </ul>
+            </div>
+        </div>
     </div>
 </section>
 
