@@ -12,131 +12,159 @@
             --secondary-color: #264653;
         }
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background: #f8f9fa;
-            color: #212529;
-        }
-
-        .profile-header {
-            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
-            color: white;
-            padding: 4rem 0;
-        }
-
-        .skill-badge {
-            background: var(--primary-color);
-            color: white;
-            transition: transform 0.3s;
-        }
-
-        .skill-badge:hover {
-            transform: translateY(-3px);
-        }
-
         .experience-card {
             border-left: 3px solid var(--primary-color);
-            transition: box-shadow 0.3s;
+            transition: transform 0.3s;
+            height: 100%;
         }
 
         .experience-card:hover {
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transform: translateY(-5px);
         }
 
-        .social-icon {
-            font-size: 1.5rem;
+        .project-link {
             color: var(--secondary-color);
-            transition: color 0.3s;
+            text-decoration: none;
+            border-bottom: 2px dotted var(--primary-color);
+        }
+
+        .tech-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .tech-list li::before {
+            content: "▹";
+            color: var(--primary-color);
+            margin-right: 0.5rem;
         }
     </style>
 </head>
 <body>
-<!-- Header Section -->
-<header class="profile-header">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-md-3 text-center">
-                <img src="assets/profile.jpg" alt="Никита Колосов" class="img-fluid rounded-circle mb-4" style="width: 200px; height: 200px;">
-            </div>
-            <div class="col-md-9">
-                <h1 class="display-4 fw-bold">Никита Колосов</h1>
-                <p class="lead">Senior Golang Developer</p>
-                <div class="d-flex gap-3 mb-4">
-                    <span><i class="fas fa-map-marker-alt"></i> Новосибирск</span>
-                    <span><i class="fas fa-briefcase"></i> Опыт: 11+ лет</span>
-                    <span><i class="fas fa-coins"></i> От 450 000 ₽</span>
-                </div>
-                <div class="d-flex gap-3">
-                    <a href="https://t.me/nkolosov" class="social-icon"><i class="fab fa-telegram"></i></a>
-                    <a href="https://github.com/nkolosov" class="social-icon"><i class="fab fa-github"></i></a>
-                    <a href="https://career.habr.com/nkolosov_nsk" class="social-icon"><i class="fas fa-globe"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
-
-<!-- Skills Section -->
-<section class="py-5">
-    <div class="container">
-        <h2 class="mb-5 text-center fw-bold">Технологический стек</h2>
-        <div class="d-flex flex-wrap gap-2 justify-content-center">
-            <span class="badge skill-badge py-2 px-3">Golang</span>
-            <span class="badge skill-badge py-2 px-3">PostgreSQL</span>
-            <span class="badge skill-badge py-2 px-3">Kubernetes</span>
-            <span class="badge skill-badge py-2 px-3">Apache Kafka</span>
-            <span class="badge skill-badge py-2 px-3">Redis</span>
-            <span class="badge skill-badge py-2 px-3">gRPC</span>
-            <span class="badge skill-badge py-2 px-3">Prometheus</span>
-            <span class="badge skill-badge py-2 px-3">Highload</span>
-        </div>
-    </div>
-</section>
 
 <!-- Experience Section -->
-<section class="py-5 bg-light">
-    <div class="container">
-        <h2 class="mb-5 text-center fw-bold">Опыт работы</h2>
-
-        <!-- Купер -->
-        <div class="card experience-card mb-4">
-            <div class="card-body">
-                <h3 class="card-title">Старший Go-разработчик @ Купер</h3>
-                <p class="text-muted">Март 2024 - Настоящее время</p>
-                <ul class="list-unstyled">
-                    <li><i class="fas fa-check text-success me-2"></i>Разработка микросервисов с нуля</li>
-                    <li><i class="fas fa-check text-success me-2"></i>Проектирование gRPC/HTTP API</li>
-                    <li><i class="fas fa-check text-success me-2"></i>Внедрение метрик и мониторинга</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Магнит -->
-        <div class="card experience-card mb-4">
-            <div class="card-body">
-                <h3 class="card-title">Tech Lead @ Магнит</h3>
-                <p class="text-muted">Август 2022 - Март 2024</p>
-                <ul class="list-unstyled">
-                    <li><i class="fas fa-check text-success me-2"></i>Разработка backend для мобильного приложения</li>
-                    <li><i class="fas fa-check text-success me-2"></i>Построение системы мониторинга</li>
-                    <li><i class="fas fa-check text-success me-2"></i>Проведение Code Review</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Education Section -->
 <section class="py-5">
     <div class="container">
-        <h2 class="mb-5 text-center fw-bold">Образование</h2>
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
+        <h2 class="mb-5 text-center fw-bold display-5">Профессиональный опыт</h2>
+
+        <div class="row g-4">
+            <!-- Купер -->
+            <div class="col-lg-6">
+                <div class="card experience-card h-100">
                     <div class="card-body">
-                        <h4>Новосибирский государственный университет</h4>
-                        <p class="mb-1">Факультет информационных технологий</p>
-                        <p class="text-muted">2010-2013</p>
+                        <div class="d-flex justify-content-between align-items-start mb-3">
+                            <div>
+                                <h3 class="h4">Старший Go-разработчик</h3>
+                                <h4 class="h5 text-muted">Купер</h4>
+                            </div>
+                            <span class="badge bg-primary">2024 - н.в.</span>
+                        </div>
+
+                        <div class="mb-4">
+                            <h5 class="fw-bold">Ключевые достижения:</h5>
+                            <ul class="tech-list">
+                                <li>Разработка микросервисов с нуля для B2B-клиентов</li>
+                                <li>Интеграция с 1C и ESP системами</li>
+                                <li>Внедрение метрик мониторинга для всего юнита</li>
+                            </ul>
+                        </div>
+
+                        <div class="mb-4">
+                            <h5 class="fw-bold">Технологии:</h5>
+                            <div class="d-flex flex-wrap gap-2">
+                                <span class="badge bg-dark">Golang</span>
+                                <span class="badge bg-dark">gRPC</span>
+                                <span class="badge bg-dark">Kafka</span>
+                                <span class="badge bg-dark">Kubernetes</span>
+                            </div>
+                        </div>
+
+                        <a href="#!" class="project-link">
+                            <i class="fab fa-github me-2"></i>Примеры кода
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Магнит -->
+            <div class="col-lg-6">
+                <div class="card experience-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-3">
+                            <div>
+                                <h3 class="h4">Tech Lead</h3>
+                                <h4 class="h5 text-muted">Магнит</h4>
+                            </div>
+                            <span class="badge bg-primary">2022-2024</span>
+                        </div>
+
+                        <div class="mb-4">
+                            <h5 class="fw-bold">Основные проекты:</h5>
+                            <ul class="tech-list">
+                                <li>Backend для мобильного приложения "Сборки"</li>
+                                <li>Система мониторинга технических метрик</li>
+                                <li>Интеграция с продуктными метриками</li>
+                            </ul>
+                        </div>
+
+                        <div class="mb-4">
+                            <h5 class="fw-bold">Достижения:</h5>
+                            <ul class="tech-list">
+                                <li>Повышение скорости обработки заказов на 40%</li>
+                                <li>Внедрение практик SRE в процессы разработки</li>
+                            </ul>
+                        </div>
+
+                        <div class="d-flex gap-3">
+                            <a href="#!" class="project-link">
+                                <i class="fas fa-external-link-alt me-2"></i>Демо
+                            </a>
+                            <a href="#!" class="project-link">
+                                <i class="fas fa-chart-line me-2"></i>Метрики
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Дополнительные материалы -->
+        <div class="row mt-5 g-4">
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fab fa-hackerrank me-2"></i>CTF Achievements</h5>
+                        <p class="card-text">Участие в соревнованиях по информационной безопасности</p>
+                        <a href="#!" class="btn btn-outline-primary">Посмотреть результаты</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fab fa-medium me-2"></i>Публикации</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#!" class="project-link">Оптимизация Golang-сервисов</a></li>
+                            <li><a href="#!" class="project-link">Kubernetes в продакшене</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-code me-2"></i>Open Source</h5>
+                        <p class="card-text">262 коммита в 6 репозиториях</p>
+                        <div class="d-flex gap-2">
+                            <a href="#!" class="btn btn-outline-dark">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#!" class="btn btn-outline-dark">
+                                <i class="fab fa-gitlab"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
